@@ -40,7 +40,7 @@ def read_name(key):
     value = model.read(key)
     # not found
     if (value is None):
-        return jsonify({"key": key, "errorMsg": "not found"}), 404
+        return jsonify({"key": key, "errorMsg": "user not found"}), 404
     # succeed
     value["key"] = key
     return jsonify(value), 200
@@ -65,10 +65,10 @@ def delete_name(key):
     # not found
     value = model.read(key)
     if not value:
-        return jsonify({"key": key, "errorMsg": "not found"}), 404
+        return jsonify({"key": key, "errorMsg": "User not found"}), 404
     # not found
     if (not model.delete(key)):
-        return jsonify({"key": key, "errorMsg": "not found"}), 404
+        return jsonify({"key": key, "errorMsg": "User not found"}), 404
     # succeed
     value["key"] = key
     return jsonify(value), 200
