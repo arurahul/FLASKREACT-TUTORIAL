@@ -80,7 +80,7 @@ def delete_name(key):
 def print_database():
     database = model.debug()
     if (database is None):
-        print("\n########### Debug Method Not Implemented #############")
+        print("\n########### Debug Method Not Implemented at all#############")
         return jsonify({"errorMsg": "Debug Method Not Implemented"}), 200
     else:
         print("\n######################################################")
