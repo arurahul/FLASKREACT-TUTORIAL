@@ -10,15 +10,16 @@ from dbms.dict_db.model import Model
 
 ############################ Initialization ############################
 app = Flask(__name__)
-# this essitial for Cross Origin Resource Sharing with React frontend
+# this essitial for Cross Origin Resource Sharing with React frontend veve
 # https://flask-cors.readthedocs.io/en/latest/
-CORS(app)   
+CORS(app)    
 # use database
 model = Model()
 
 
 ##########################  API Implementation #########################
-# https://github.com/Jiangyiqun/fullstack_tutorial/tree/master/documentation
+# https://github.com/Jiangyiqun/fullstack_tutorial/tree/master/documentation 
+# check how it goes
 ############################## create name #############################
 @app.route('/keys', methods = ["POST"])
 def create_name():
